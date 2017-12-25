@@ -14,15 +14,8 @@ module.exports = {
       exclude: /(node_modules)/,
       loader: 'babel-loader',
       query: {
-        presets: ['es2015']
+        presets: ['env', 'react']
       }
     }]
   },
-
-  resolve: {
-    modules: [
-      path.resolve(__dirname, "./node_modules"),
-      path.resolve(__dirname + "./assets/js")
-    ]
-  }
 };
