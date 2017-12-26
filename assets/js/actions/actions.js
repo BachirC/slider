@@ -1,14 +1,14 @@
-import { MOVE_CARD } from "../constants.js";
+import { MOVE_CARD } from "../constants";
+import store from '../store/store';
 
-export function moveCard(id) {
-  return dispatch => {
-    dispatch(moveCardDefinition(id));
-  }
+export function moveCard(id, listId) {
+  store.dispatch(moveCardDefinition(id, listId));
 }
 
-function moveCardDefinition(id) {
+function moveCardDefinition(id, listId) {
   return {
     type: MOVE_CARD,
-    id: id
+    id: id,
+    listId: listId
   }
 }
