@@ -7,11 +7,19 @@ import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
 const App = (props) => {
+  const listWidth = Math.round(100 / props.cardLists.length) + "%";
+
   return (
     <div>
       {props.cardLists.map((list) => {
         return (
-          <div key={list.id} style={{border: 'dotted', borderWidth: '0.1px', width: '33%', backgroundColor: '#f5f5f0', float: 'left'}}>
+          <div key={list.id}
+            style={{
+              border: 'dotted',
+              borderWidth: '0.1px',
+              width: listWidth,
+              backgroundColor: '#f5f5f0',
+              float: 'left'}}>
             <CardList cardListId={list.id} {...props} />
           </div>
         );

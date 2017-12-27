@@ -2,7 +2,7 @@ defmodule SliderWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SliderWeb.RoomChannel
+  channel "slider:*", SliderWeb.SliderChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
