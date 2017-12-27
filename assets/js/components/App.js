@@ -15,8 +15,6 @@ const App = (props) => {
         return (
           <div key={list.id}
             style={{
-              border: 'dotted',
-              borderWidth: '0.1px',
               width: listWidth,
               backgroundColor: '#f5f5f0',
               float: 'left'}}>
