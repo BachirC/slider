@@ -13,7 +13,7 @@ defmodule SliderWeb.SliderChannel do
     broadcast! socket, "MOVE_CARD", %{token: token, body: body}
     {:noreply, socket}
   end
-  # Broadcasts MOVE_CARD action to connected sockets
+  # ignore all other messages
   def handle_in(_, _, socket) do
     {:noreply, socket}
   end

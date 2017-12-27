@@ -1,7 +1,4 @@
 import { Socket } from "phoenix";
-import { MOVE_CARD } from "./constants";
-import store from './store/store';
-
 let socket = new Socket("/socket");
 
 socket.connect()
